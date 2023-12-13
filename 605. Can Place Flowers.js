@@ -6,15 +6,12 @@ var canPlaceFlowers = function(flowerbed, n) {
     for (let i = 0; i < copy.length; i++) {
         if (count === n) break;
         if (i === 0 && copy[i + 1] === 0 && copy[i] === 0) {
-            // console.log("1");
             copy[i] = 1;
             count++;
         } else if (i === copy.length - 1 && copy[i - 1] === 0 && copy[i] === 0) {
-            // console.log("2");
             copy[i] = 1;
             count++;
         } else if (copy[i] !== 1 && copy[i - 1] === 0 && copy[i + 1] === 0) {
-            // console.log("3");
             copy[i] = 1;
             count++;
         };
